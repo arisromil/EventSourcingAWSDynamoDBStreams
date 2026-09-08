@@ -1,0 +1,15 @@
+# CloudFormation snippet for Lambda error alarm
+EventProcessorErrorAlarm:
+  Type: AWS::CloudWatch::Alarm
+  Properties:
+    AlarmName: EventProcessorErrorAlarm
+    ComparisonOperator: GreaterThanThreshold
+    EvaluationPeriods: 1
+    MetricName: Errors
+    Namespace: AWS/Lambda
+    Period: 60
+    Statistic: Sum
+    Threshold: 0
+    Dimensions:
+      - Name: FunctionName
+        Value: !Ref EventProcessorFunction
