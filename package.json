@@ -1,0 +1,12 @@
+{
+  "name": "event-sourcing-aws-dynamodb-streams",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Event-sourcing examples and AWS infrastructure snippets using DynamoDB Streams",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

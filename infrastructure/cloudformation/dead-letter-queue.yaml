@@ -1,0 +1,9 @@
+Resources:
+  EventProcessorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs16.x
+      DeadLetterQueue:
+        Type: SQS
+        TargetArn: !GetAtt EventProcessingDLQ.Arn
